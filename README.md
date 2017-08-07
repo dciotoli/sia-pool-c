@@ -12,11 +12,13 @@ Right now There's no tests or test client written, so the easiest way is to just
 (if you dont have netcat definitely get it).
 Example:
 ```bash
-	./stratum-server 7070 
+$ make clean
+$ make
+$ ./stratum-c 7070 
 ```
 Then run in another terminal tab
 ```bash
-	nc localhost 7070
-		{"method": "test"}
+$ nc localhost 7070
+> {"method": "test"}
 ```
-The server should echo the name of the method back at you... because thats as far as i've gotten right now. :-)
+The server should echo the name of the method back at you. because thats as far as i've gotten right now. :-)
