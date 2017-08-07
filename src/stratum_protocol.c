@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include <stdin.h>
+#include <stdlib.h>
+#include <string.h>
 #include "stratum_protocol.h"
 #include "cJSON.h"
+
 /* Public Functions */
 
 int process(char *buf, char *resp) {
@@ -12,7 +14,8 @@ int process(char *buf, char *resp) {
 	// Call appropriate method (for now just echo back the method)
 	if (cJSON_IsString(method))
 	{
-	  strncpy(resp, method->valuestring, 255);
+	  // need to add a newline
+	  strncpy(resp, method->valuestring, BUFFER_SIZE);
 	}
 	// all went well, return 0
 	cJSON_Delete(root);

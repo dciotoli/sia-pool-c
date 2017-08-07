@@ -27,6 +27,8 @@ void *clientThread(void *args) {
 		// TODO: is strlen(resp) ok ???
 		err = send(client_fd, resp, strlen(resp), 0);
 		if (err < 0) on_error("Client write failed\n");
+		// clear buffer
+		memset(buf, '\0', (size_t) BUFFER_SIZE);
 	}
 
 	return NULL;
