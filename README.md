@@ -1,15 +1,10 @@
-Step 1).
+# Sia-Pool-C
+A stratum based Siacoin pool server. Written in C with a MySql Backend
+![Image of Sia Logo]
+(https://coinranking.com/static/icons/vector/sc.svg)
 
-Install Mysql Server and libraries
-
-Step 2).
-
-Start MySQL Server and add the correct tables
-
-Step 3).
-
-Run make
-
-Step 4).
-
-Start the stratum server
+## Todo
+* Figure out how to get MySQL (or other persistent backend)
+* Finish creating code skeleton
+* Implement server functionality :P
+* Create a web app that connects to same server to serve up stats to users
